@@ -1,0 +1,308 @@
+[
+    {
+        "id" : "0",
+        "level" : "бакалавриат",
+        "name" : "Информатика и вычислительная техника",
+        "code" : "09.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b303d0a2.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "1",
+        "level" : "бакалавриат",
+        "name" : "Информационные системы и технологии",
+        "code" : "09.03.02",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b340ff57.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "2",
+        "level" : "бакалавриат",
+        "name" : "Прикладная информатика",
+        "code" : "09.03.03",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b3803dd5.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "3",
+        "level" : "бакалавриат",
+        "name" : "Приборостроение",
+        "code" : "12.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63ad071dbe.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "4",
+        "level" : "бакалавриат",
+        "name" : "Машиностроение",
+        "code" : "15.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b5ce4187.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "5",
+        "level" : "бакалавриат",
+        "name" : "Автоматизация технологических процессов и производств",
+        "code" : "15.03.04",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63afb95175.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "6",
+        "level" : "бакалавриат",
+        "name" : "Конструкторско-технологическое обеспечение машиностроительных производств",
+        "code" : "15.03.05",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b617a3aa.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "7",
+        "level" : "бакалавриат",
+        "name" : "Мехатроника и робототехника",
+        "code" : "15.03.06",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b07667cc.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "8",
+        "level" : "бакалавриат",
+        "name" : "Проектирование технологических машин и комплексов",
+        "code" : "15.05.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b6580382.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "9",
+        "level" : "бакалавриат",
+        "name" : "Техносферная безопасность",
+        "code" : "20.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b6a0869f.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "10",
+        "level" : "бакалавриат",
+        "name" : "Материаловедение и технологии материалов",
+        "code" : "22.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b6df3a58.pdf",
+        "exams" : [
+            2, 1, 3
+        ]
+    },
+    {
+        "id" : "11",
+        "level" : "бакалавриат",
+        "name" : "Стандартизация и метрология",
+        "code" : "27.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b149ab81.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "12",
+        "level" : "бакалавриат",
+        "name" : "Управление качеством",
+        "code" : "27.03.02",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b7fe9d22.pdf",
+        "exams" : [
+            2, 1, 0
+        ]
+    },
+    {
+        "id" : "13",
+        "level" : "бакалавриат",
+        "name" : "Экономика",
+        "code" : "38.03.01",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b861d210.pdf",
+        "exams" : [
+            2, 1, 4
+        ]
+    },
+    {
+        "id" : "14",
+        "level" : "бакалавриат",
+        "name" : "Менеджмент",
+        "code" : "38.03.02",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b8b7c989.pdf",
+        "exams" : [
+            2, 1, 4
+        ]
+    },
+    {
+        "id" : "15",
+        "level" : "бакалавриат",
+        "name" : "Управление персоналом",
+        "code" : "38.03.03",
+        "type" : "Очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b8f7d223.pdf",
+        "exams" : [
+            2, 1, 4
+        ]
+    },
+    {
+        "id" : "16",
+        "level" : "магистратура",
+        "name" : "Информатика и вычислительная техника",
+        "code" : "09.04.01",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b546b0d6.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "17",
+        "level" : "магистратура",
+        "name" : "Приборостроение",
+        "code" : "12.04.01",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b1a0b389.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "18",
+        "level" : "магистратура",
+        "name" : "Автоматизация технологических процессов и производств",
+        "code" : "15.04.04",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b1e477a2.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "19",
+        "level" : "магистратура",
+        "name" : "Конструкторско- технологическое обеспечение машино- строительных производств",
+        "code" : "15.04.05",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b751c762.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "20",
+        "level" : "магистратура",
+        "name" : "Мехатроника и робототехника",
+        "code" : "15.04.06",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b2321bfe.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "21",
+        "level" : "магистратура",
+        "name" : "Техносферная безопасность",
+        "code" : "20.04.01",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b79b9205.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "22",
+        "level" : "магистратура",
+        "name" : "Управление качеством",
+        "code" : "27.04.02",
+        "type" : "очная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b93b7496.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "23",
+        "level" : "магистратура",
+        "name" : "Менеджмент",
+        "code" : "38.04.02",
+        "type" : "очно-заочная",
+        "link" : "https://stankin.ru/uploads/files/file_5de63b989b0c5.pdf",
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "24",
+        "level" : "аспирантура",
+        "name" : "Физика и астрономия",
+        "code" : "03.06.01",
+        "type" : "очная",
+        "link" : null,
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "25",
+        "level" : "аспирантура",
+        "name" : "Информатика и вычислительная техника",
+        "code" : "09.06.01",
+        "type" : "очная",
+        "link" : null,
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "26",
+        "level" : "аспирантура",
+        "name" : "Машиностроение",
+        "code" : "15.06.01",
+        "type" : "очная",
+        "link" : null,
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "27",
+        "level" : "аспирантура",
+        "name" : "Управление в технических системах",
+        "code" : "27.06.01",
+        "type" : "очная",
+        "link" : null,
+        "exams" : [
+        ]
+    },
+    {
+        "id" : "28",
+        "level" : "аспирантура",
+        "name" : "Экономика",
+        "code" : "38.06.01",
+        "type" : "очная",
+        "link" : null,
+        "exams" : [
+        ]
+    }
+]
