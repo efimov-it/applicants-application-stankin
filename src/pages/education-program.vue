@@ -20,7 +20,7 @@
         <hr />
         <p>Выберите интересующее Вас направление подготовки из списка ниже. Обратите внимание на наличие вступительных испытаний и уровень образования (Вы можете выбрать уровень образования программы подготовки сверху).</p>
 
-        <div v-for="(program, i) in programs"
+        <div v-for="(program, i) in $root.data.programs"
             :key="i"
             class="mb-4">
             <div v-if="(program.level == filter ||
@@ -58,7 +58,7 @@
                         <ol v-if="program.level == 'бакалавриат'">
                             <li v-for="(examId, i) in program.exams"
                                 :key="i">
-                                {{exams[examId].name}}
+                                {{$root.data.exams[examId].name}}
                             </li>
                         </ol>
                     </div>
@@ -80,15 +80,10 @@
 </template>
 
 <script>
-import programs from '../Data/programs.json';
-import exams from '../Data/exams.json';
-
 export default {
     data () {
         return {
             filter: null,
-            programs: programs,
-            exams: exams,
             selectedProgram: null
         }
     },
@@ -114,7 +109,7 @@ export default {
 
     created() {
         if (Object.keys(this.$parent.$data.data.educationProgram).length > 0) {
-            this.programs.find((program, i) => {
+            this.$root.data.programs.find((program, i) => {
                 if (program.code == this.$parent.$data.data.educationProgram.code) {
                     this.selectedProgram = i;
                 }

@@ -62,6 +62,29 @@
         Факс: <a htef="fax:+74999733167">(499) 973-31-67</a>
       </p>
     </div>
+
+    <div :class="'modal fade' + (modal.shown ? ' shown' : '')"
+         :style="'opacity: 1;'+(modal.shown ? 'display: block;' : '')">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">{{modal.title}}</h5>
+            <button type="button" class="close" @click="this.closeModal">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" v-html="modal.text" />
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" @click="this.closeModal">Отмена</button>
+            <button
+                    type="button"
+                    class="btn btn-danger"
+                    @click="this.callModalCallback"
+                    >{{modal.okText ? modal.okText : 'ОК'}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -102,20 +125,6 @@ export default {
           text: 'Проверка заявления'
         }
       ],
-      currentEducation : [
-        'Основное общее (9 классов)',
-        'Среднее общее (11 классов)',
-        'Среднее профессиональное',
-        'Бакалавриат',
-        'Специалитет',
-        'Магистратура',
-        'Ординатура'
-      ],
-      marks : [
-        'Свидетельство ОГЭ (после 9 классов)',
-        'Свидетельство ЕГЭ',
-        'Вступительные испытания ОУ'
-      ],
       data: {
         personalData: {
           name: null,
@@ -148,6 +157,13 @@ export default {
           exam: null,
           file: null
         }
+      },
+      modal : {
+        shown: false,
+        title: '',
+        text: '',
+        okText: '',
+        callback: null
       }
     }
   },
@@ -172,8 +188,61 @@ export default {
       this.steps[currentPage].isActive = false;
       this.steps[currentPage + 1].isActive = true;
     },
+
+    showModal (title, text, okText, callback) {
+      this.modal.title = title;
+      this.modal.text = text;
+      this.modal.okText = okText;
+      this.modal.callback = callback;
+
+      this.modal.shown = true;
+    },
+
+    callModalCallback () {
+      if (this.modal.callback) {
+        this.modal.callback();
+      }
+      else {
+        this.closeModal();
+      }
+    },
+
+    closeModal () {
+      this.modal.shown = false;
+    },
+
     sendData () {
-      console.log(this.data);
+      if (!this.data.personalData.name                  ||
+          !this.data.personalData.fam                   ||
+          !this.data.personalData.bDate                 ||
+          !this.data.personalData.document.serialNumber ||
+          !this.data.personalData.document.number       ||
+          !this.data.personalData.document.date         ||
+          !this.data.personalData.document.unitCode     ||
+          !this.data.personalData.address.region        ||
+          !this.data.personalData.address.town          ||
+          !this.data.personalData.address.street        ||
+          !this.data.personalData.address.building      ||
+          !this.data.personalData.address.postalCode    ||
+          !this.data.personalData.phone                 ||
+          !this.data.personalData.email                 ||
+          !this.data.educationProgram.code              ||
+          !this.data.currentEducation.exam              ||
+          !this.data.currentEducation.file              ||
+          !this.data.currentEducation.level
+      ) {
+        return this.showModal('Ошибка заполнения',
+                               'Не все обязательные поля были заполнены. Пожалуйста, проверьте все поля отмеченные звёздочкой (*) и повторите попытку снова.',
+                               'Понятно');
+      }
+      else {
+        this.showModal('Отправка зяавления',
+                       'Если вы уверены в том, что заявление заполнено корректно, нажмите кнопку отправить. Помните, что после отправки заявления внести корректировки будет невозможно.<br /><br />Отправляя заявление, вы соглашаетесь с <a href="#" title="Просьба предоставить перечень документов для добавления их на форму">[перечень документов]</a>',
+                       'Отправить',
+                       ()=>{
+                         console.log('Пока обрабатывающий заявку backend не готов, данные для заявления выводятся в консоль\n',this.data);
+                       });
+      }
     }
   }
 }

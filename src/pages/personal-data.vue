@@ -45,7 +45,7 @@
             <div class="form-group col-sm-12 col-md-6">
                 <label for="personalDocument">*Тип документа:</label>
                 <select class="form-control" id="personalDocument" v-model="$parent.$data.data.personalData.document.personalDocument">
-                    <option v-for="(doc, i) in this.personalDocuments"
+                    <option v-for="(doc, i) in $root.data.personalDocuments"
                             :key="i"
                             :value="doc.value">
                             {{doc.name}}
@@ -56,7 +56,7 @@
             <div class="form-group col-sm-12 col-md-6">
                 <label for="citizenship">*Гражданство:</label>
                 <select class="form-control" id="citizenship" v-model="$parent.$data.data.personalData.document.citizenship">
-                    <option v-for="(cit, i) in this.citizenship"
+                    <option v-for="(cit, i) in $root.data.citizenship"
                             :key="i"
                             :value="cit.id">
                             {{cit.name}}
@@ -211,26 +211,3 @@
         </div>
     </div>
 </template>
-
-<script>
-import citizenship from '../Data/citizenship';
-import personalDocuments from '../Data/personalDocuments'
-
-export default {
-    data () {
-        return {
-            personalDocuments: personalDocuments,
-            citizenship: citizenship
-        }
-    },
-
-    updated () {
-        //$parent.$data.data.personalData = this.data;
-    }
-}
-</script>
-
-<style lang="scss" scoped>
-
-</style>
-

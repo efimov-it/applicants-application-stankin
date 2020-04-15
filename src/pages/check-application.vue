@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <p><strong>Тип документа:</strong>
-                   {{data.personalData.document.personalDocument ? personalDocuments[data.personalData.document.personalDocument].name : 'Пожалуйста, укажите тип документа удостоверяющего личность'}}</p>
+                   {{data.personalData.document.personalDocument ? $root.data.personalDocuments[data.personalData.document.personalDocument].name : 'Пожалуйста, укажите тип документа удостоверяющего личность'}}</p>
             </div>
             
             <div class="col-sm-12 col-md-6">
@@ -157,6 +157,7 @@
             </div>
         </div>
         <hr />
+        <VueReCaptcha />
         <div class="alert alert-danger">
             Внимательно проверьте заполнение всех полей на наличие ошибок и соответствие паспортным данным.<br />
             После отправки заявления отредактировать его будет невозможно.
@@ -165,14 +166,12 @@
 </template>
 
 <script>
-import personalDocuments from '../Data/personalDocuments';
 import citizenship from '../Data/citizenship';
 import exams from '../Data/exams';
 export default {
     props: ['data'],
     data () {
         return {
-            personalDocuments: personalDocuments,
             citizenship: citizenship,
             exams: exams
         }

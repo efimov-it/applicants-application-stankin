@@ -1,14 +1,23 @@
 import Vue from 'vue';
+import { VueReCaptcha } from 'vue-recaptcha-v3';
 import App from './App.vue';
-
+import data from './Data/';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import '../node_modules/jquery/dist/jquery.min';
-// import '../node_modules/popper.js/dist/popper.min';
-// import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
-// import '../node_modules/bootstrap/dist/js/bootstrap.min';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use(VueReCaptcha, {
+  siteKey: '6Le2uOkUAAAAAMQ8LVOwFvHsg0xFOjRRE-G9xa0d',
+  loaderOptions: {
+    useRecaptchaNet: true
+  }
+});
 
 new Vue({
   render: h => h(App),
+  data () {
+    return {
+      data
+    }
+  }
 }).$mount('#app')
