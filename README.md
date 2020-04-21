@@ -1,5 +1,5 @@
-# applicants-application-stankin
-
+![Repo banner](https://efimov-it.github.io/applicants-application-stankin/repo_img.png)
+Simple form for send application to the admissions Committee of MSUT Stankin
 ## Project setup
 ```
 npm install
