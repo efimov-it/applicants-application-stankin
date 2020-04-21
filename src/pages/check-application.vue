@@ -26,7 +26,7 @@
             
             <div class="col-sm-12 col-md-6">
                 <p><strong>Гражданство:</strong>
-                   {{data.personalData.document.citizenship >= 0 ? citizenship[data.personalData.document.citizenship].name : 'Пожалуйста, укажите ваше гражданство'}}</p>
+                   {{data.personalData.document.citizenship >= 0 ? $root.$data.data.citizenship[data.personalData.document.citizenship].name : 'Пожалуйста, укажите ваше гражданство'}}</p>
             </div>
         </div>
         
@@ -60,7 +60,7 @@
                     data.personalData.address.street &&
                     data.personalData.address.building ?
 
-                    citizenship[data.personalData.document.citizenship].name + ', ' +
+                    $root.$data.data.citizenship[data.personalData.document.citizenship].name + ', ' +
                     data.personalData.address.region + ', ' +
                     (data.personalData.address.district ? 
                     data.personalData.address.district + ', ' : '') +
@@ -126,7 +126,7 @@
                 <p><strong>Вступительные испытания:</strong>
                     <ol>
                         <li v-for="(exam, i) in data.educationProgram.exams"
-                            :key="i">{{exams[exam].name}}</li>
+                            :key="i">{{$root.$data.data.exams[exam].name}}</li>
                     </ol>
                 </p>
             </div>
@@ -157,7 +157,6 @@
             </div>
         </div>
         <hr />
-        <VueReCaptcha />
         <div class="alert alert-danger">
             Внимательно проверьте заполнение всех полей на наличие ошибок и соответствие паспортным данным.<br />
             После отправки заявления отредактировать его будет невозможно.
@@ -166,15 +165,7 @@
 </template>
 
 <script>
-import citizenship from '../Data/citizenship';
-import exams from '../Data/exams';
 export default {
-    props: ['data'],
-    data () {
-        return {
-            citizenship: citizenship,
-            exams: exams
-        }
-    }
+    props: ['data']
 }
 </script>

@@ -17,7 +17,20 @@ new Vue({
   render: h => h(App),
   data () {
     return {
-      data
+      data,
+      recaptchaToken: null
     }
+  },
+  methods : {
+    async recaptcha() {
+      await this.$recaptchaLoaded();
+      const token = await this.$recaptcha('login');
+      return token;
+    }
+  },
+  mounted () {
+    this.recaptcha().then(resp=>{
+      this.recaptchaToken = resp;
+    });
   }
 }).$mount('#app')

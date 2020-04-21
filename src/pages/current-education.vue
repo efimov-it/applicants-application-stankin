@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style scoped>
-.custom-file-label::after{
-  content: "Открыть";
-}
+    .custom-file-label::after{
+    content: "Открыть";
+    }
 </style>

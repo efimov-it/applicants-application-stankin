@@ -5,14 +5,17 @@
                 :class="'btn mr-1 mb-1' + (filter == 'бакалавриат' ? ' btn-danger' : ' btn-outline-danger')"
                 @click="filter = 'бакалавриат'; clearSelect()"
                 >Бакалавриат/специалитет</button>
+
         <button type="button" 
                 :class="'btn mr-1 mb-1' + (filter == 'магистратура' ? ' btn-danger' : ' btn-outline-danger')"
                 @click="filter = 'магистратура'; clearSelect()"
                 >Магистратура</button>
+
         <button type="button" 
                 :class="'btn mr-1 mb-1' + (filter == 'аспирантура' ? ' btn-danger' : ' btn-outline-danger')"
                 @click="filter = 'аспирантура'; clearSelect()"
                 >Аспирантура</button>
+                
         <button type="button"
                 class="btn btn-outline-danger mb-1"
                 v-if="filter"

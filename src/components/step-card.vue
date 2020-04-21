@@ -16,6 +16,8 @@ export default {
     .step-card {
         padding: 0px 10px;
         text-align: center;
+        cursor: pointer;
+        user-select: none;
 
         h2, span {
             color: #AFAFAF;
@@ -40,6 +42,21 @@ export default {
 
             hr {
                 background-color: #9D0C1E;
+            }
+        }
+
+        @media (max-width: 992px) {
+            
+            &:not(.active), span {
+                display: none;
+            }
+
+            h2::after {
+                content: ' из 4';
+            }
+
+            hr {
+                height: 2px;
             }
         }
     }
